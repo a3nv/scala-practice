@@ -5,11 +5,13 @@ import collection.mutable.Stack
 import org.scalatest.flatspec.AnyFlatSpec
 
 
-class E709ToLowerCaseTest extends AnyFlatSpec {
+class E709ToLowerCaseSpec extends AnyFlatSpec {
+
+  behavior of "to lower case method"
 
   val sol = new E709ToLowerCase
 
-  "A call" should "return a result in a lower case from a string with a british capitalization letters" in {
+  it should "return a result in a lower case from a string with a british capitalization letters" in {
     assert("leetcode".equals(sol.toLowerCase("LeetCode")))
   }
 
